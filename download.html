@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>插件下载</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="download-container">
+    <h1 id="plugin-title">插件下载</h1>
+    <div class="download-buttons">
+      <a href="#" class="download-btn web-download" id="web-download">
+        <span>网页下载</span>
+        <div class="hover-effect"></div>
+      </a>
+      <a href="#" class="download-btn cloud-download" id="cloud-download">
+        <span>网盘下载</span>
+        <div class="hover-effect"></div>
+      </a>
+    </div>
+    <div class="download-instructions">
+      <h3>下载说明</h3>
+      <ul>
+        网页下载无限速
+        网盘下载推荐VIP用户
+      </ul>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const webDownload = document.getElementById('web-download');
+      const cloudDownload = document.getElementById('cloud-download');
+      const urlParams = new URLSearchParams(window.location.search);
+      const pluginName = urlParams.get('plugin');
+
+      const downloadLinks = {
+        '红巨人降噪磨皮美颜调色套装': {
+          web: 'https://example.com/redgiant',
+          cloud: 'https://pan.baidu.com/s/redgiant'
+        },
+        '蓝宝石插件': {
+          web: 'https://example.com/sapphire', 
+          cloud: 'https://pan.baidu.com/s/sapphire'
+        },
+        '粒子套装插件': {
+          web: 'https://example.com/particle',
+          cloud: 'https://pan.baidu.com/s/particle'
+        },
+        '摩卡插件': {
+          web: 'https://example.com/mocha',
+          cloud: 'https://pan.baidu.com/s/mocha'
+        },
+        '三维模型插件 E3D': {
+          web: 'https://example.com/e3d',
+          cloud: 'https://pan.baidu.com/s/e3d'
+        },
+        'BCC 插件': {
+          web: 'https://example.com/bcc',
+          cloud: 'https://pan.baidu.com/s/bcc'
+        },
+        'Saber插件': {
+          web: 'https://example.com/saber',
+          cloud: 'https://pan.baidu.com/s/saber'
+        },
+        'VFX Suite 抠像跟踪插件套装': {
+          web: 'https://example.com/vfx',
+          cloud: 'https://pan.baidu.com/s/vfx'
+        }
+      };
+
+      // 覆盖默认下载链接
+      webDownload.href = "https://bj18970.apps.aliyunfile.com/disk/s/jeygBbCFijG";
+      cloudDownload.href = "https://pan.baidu.com/s/1ZEYFg5fJTqTsmCgc3WxvjA?pwd=2025";
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
